@@ -1,0 +1,21 @@
+I want to create an MCP (Model Context Protocol) server in Node.js that connects to my task backend API.  
+The MCP server should:
+
+1. Connect to the REST API I already built (running on localhost:3000).
+   - GET /tasks
+   - GET /tasks/:id
+   - GET /tasks/:id/related
+   - POST /tasks/:id/export
+
+2. Expose MCP tools to Cursor/Copilot:
+   - `listTasks` → fetch tasks and return them as JSON.
+   - `getTask` → get details of a task by ID.
+   - `findRelatedTasks` → return related tasks for a given task ID.
+   - `exportTaskDoc` → trigger export and return the Markdown content.
+
+3. Use Node.js with TypeScript if possible.
+4. Provide a `server.ts` file as the main entry point.
+5. Include configuration so that Cursor/Copilot can connect to this MCP server directly.
+6. Return responses in a structured JSON format so that the editor can consume them easily.
+
+Please generate the full boilerplate code for this MCP server with proper folder structure and stubs for each tool.

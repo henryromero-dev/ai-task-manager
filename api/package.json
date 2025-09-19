@@ -1,0 +1,31 @@
+{
+  "name": "task-backend-api",
+  "author": "Henry Romero",
+  "version": "1.0.0",
+  "description": "Centralized task backend with Express, SQLite and OpenProject integration",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "sqlite",
+    "openproject",
+    "tasks",
+    "api",
+    "backend"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0",
+    "axios": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

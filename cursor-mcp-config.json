@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "task-mcp-server": {
+      "command": "node",
+      "args": ["dist/server.js"],
+      "cwd": "C:\\dev\\mcp\\mcp",
+      "env": {
+        "API_BASE_URL": "http://localhost:3000"
+      }
+    }
+  }
+}

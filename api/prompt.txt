@@ -1,0 +1,47 @@
+I want to create a Node.js application using Express and SQLite as a centralized task backend.  
+The application should:
+
+1. Expose a REST API with the following endpoints:
+   - GET /tasks → list all tasks stored in SQLite.
+   - POST /tasks → manually create a task (title, description, project, status).
+   - POST /sync → fetch tasks from OpenProject API using my API KEY and insert/update them in SQLite.
+   - GET /tasks/:id → get a specific task by ID.
+   - GET /tasks/:id/related → find related tasks (based on keyword matching in title or description).
+   - POST /tasks/:id/export → generate an `IMPLEMENTATION.md` file with all task details.
+
+2. Use a SQLite database named `tasks.db` with a `tasks` table containing:
+   - id (primary key, autoincrement)
+   - external_id (OpenProject ID, optional)
+   - title
+   - description
+   - project
+   - status
+   - created_at
+   - updated_at
+
+3. Include a `db.js` file to handle SQLite initialization and queries.
+
+4. Include a `openproject.js` service file to communicate with the OpenProject REST API.
+   - Authenticate using an API token stored in `process.env.OP_API_KEY`.
+   - Provide functions to fetch tasks from OpenProject.
+
+5. Add a health check endpoint:
+   - GET /health → returns `{ status: "ok" }`.
+
+6. Use `dotenv` for environment variables (like `OP_API_KEY`).
+
+7. Organize the project structure into folders:
+   - `/routes`
+   - `/controllers`
+   - `/models`
+   - `/services` (for OpenProject integration)
+   - `/utils`
+
+8. Generate the initial project setup including `package.json` with dependencies:
+   - express
+   - sqlite3
+   - axios
+   - dotenv
+   - nodemon (dev)
+
+Please generate the full boilerplate code, including `index.js` as the main entry point, database initialization, and at least stubs for all required files.
