@@ -14,7 +14,7 @@ Complete task management system with MCP (Model Context Protocol) integration fo
 ## 📁 Project Structure
 
 ```
-mcp/
+ai-task-manager/
 ├── api/                    # Backend API
 │   ├── controllers/        # API controllers
 │   ├── models/            # Data models
